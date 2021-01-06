@@ -92,3 +92,5 @@ sw.*
 plugins/*.js
 
 store/*.js
+
+assets

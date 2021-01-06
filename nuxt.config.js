@@ -20,16 +20,18 @@ export default {
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     'element-ui/lib/theme-chalk/index.css',
-    '@/assets/css/global.scss'
+    '@/assets/css/global.scss',
+    '@assets/icons/iconfont.css'
   ],
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    '@/plugins/element-ui',
-    '@/plugins/lodash',
-    '@/plugins/day',
-    '@/plugins/echarts',
-    '@/plugins/axios',
-    '@/plugins/mock'
+    {src: '@/plugins/element-ui', mode: 'client'},
+    {src: '@/plugins/lodash', mode: 'client'},
+    {src: '@/plugins/day', mode: 'client'},
+    {src: '@/plugins/echarts', mode: 'client'},
+    {src: '@/plugins/axios', mode: 'client'},
+    {src: '@/plugins/mock', mode: 'client'},
+    {src: '@assets/icons/iconfont.js', mode: 'client'},
   ],
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,

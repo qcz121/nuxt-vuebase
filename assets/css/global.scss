@@ -3,7 +3,20 @@ html, body,#__nuxt,#__layout{
 }
 
 body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,dt,form,fieldset,legend,input,textarea,select,div{margin:0;padding:0; box-sizing: border-box;}
-
+a {text-decoration: none; color: #000}
 .zhzw-container {
   height: 100%;
+}
+
+.el-container {
+  height: 100%;
+}
+
+.el-aside {
+  background-color: #666;
+  padding-right: 1px;
+}
+
+.el-menu {
+  border-right: none;
 }

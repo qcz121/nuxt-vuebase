@@ -1,0 +1,16 @@
+{
+  "id": "2311561",
+  "name": "nuxtbase",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "nuxtbase需要的icon图标",
+  "glyphs": [
+    {
+      "icon_id": "606294",
+      "name": "注销",
+      "font_class": "zhuxiaologout11",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    }
+  ]
+}
