@@ -1,0 +1,40 @@
+{
+  "name": "zhzw-vuebase",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint-fix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "dayjs": "^1.10.1",
+    "echarts": "^4.9.0",
+    "element-ui": "^2.13.2",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.20",
+    "nuxt": "^2.14.6"
+  },
+  "devDependencies": {
+    "@nuxtjs/axios": "^5.12.5",
+    "@nuxtjs/proxy": "^2.1.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-import-resolver-webpack": "^0.13.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-vue": "^7.4.0",
+    "mockjs": "^1.1.0",
+    "postcss-hexrgba": "^2.0.1",
+    "postcss-responsive-type": "^1.0.0",
+    "sass": "^1.32.0",
+    "sass-loader": "^10.1.0",
+    "style-resources-loader": "^1.4.1"
+  }
+}

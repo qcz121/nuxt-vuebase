@@ -1,0 +1,66 @@
+$defaultSize: 12px !default;
+
+@function rem($px){
+  @return $px / $defaultSize * 1rem;
+}
+
+$font-family: 'Microsoft YaHei',  Arial, 'PingFang SC', 'San Francisco', Verdana, sans-serif;
+
+// layout
+$main-width: 1200px;
+$content-width: $main-width;
+$header-height: 94px;
+$footer-height: 94px;
+$menu-width: 180px;
+$pageHeader-height: 48px;
+$body-background-color: #F6F8F9;
+$main-content-background-color: #FFFFFF;
+$main-content-min-height: calc(100vh - #{$header-height} - #{$footer-height} - 50px - 24px);
+
+// main-color
+$main-color: #1890FF;
+$main-focus-color: #086CD9;
+$main-hover-color: #40A9FF;
+$primary-color: $main-color;
+$success-color: #53C41C;
+$error-color: #F5222C;
+$warning-color: #FAAD14;
+$disabled-color: rgba(#000, 0.25);
+
+// font-color
+$title-font-color: rgba(#000,0.85);
+$main-font-color: rgba(#000, 0.65);
+$secondary-font-color: rgba(#000, 0.45);
+$disabled-font-color: $disabled-color;
+$light-border-color: rgba(#000, 0.15);
+$br-color: rgba(#000, 0.09);
+$disable-input-bg: rgba(#000, 0.04);
+
+// font-size
+$h1-font-size: 38px;
+$h2-font-size: 30px;
+$h3-font-size: 24px;
+$h4-font-size: 20px;
+$h5-font-size: 18px;
+$h6-font-size: 16px;
+$main-font-size: 14px;
+$caption-font-size: 12px;
+
+// gap
+$small-gap: 8px;
+$middle-gap: 16px;
+$large-gap: 24px;
+$tiny-gap: 4px;
+$super-gap: 32px;
+
+// btn
+$btn-small-height: 24px;
+$btn-middle-height: 32px;
+$btn-large-height: 40px;
+
+
+$form-label-width: 10em;
+$form-input-width: 15em;
+$full-width: 100%;
+$full-label-width: 25%;
+$full-content-width: 50%;
