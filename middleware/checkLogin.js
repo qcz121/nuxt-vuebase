@@ -1,7 +1,7 @@
-import utils from '../utils';
+import Cookies from 'js-cookie';
 
 export default ({
-  route, req, res, redirect,
+  route, redirect,
 }) => {
   const isClient = process.client;
   let redirectURL = '/login';
@@ -9,17 +9,14 @@ export default ({
   let path;
   // 在客户端判读是否需要登陆
   if (isClient) {
-    token = utils.getcookiesInClient('token');
+    token = Cookies.get('token') || '';
     path = route.path;
   }
   if (path) {
     redirectURL = `/login?ref=${encodeURIComponent(path)}`;
   }
   // 需要进行权限判断的页面开头
-  console.log(token, 'tokentokentokentoken');
-  if (!token && route.path !== '/login') {
+  if (!token && route.path !== redirectURL) {
     redirect(redirectURL);
   }
-
-  console.log(res, req, 'resreq');
 };

@@ -78,8 +78,6 @@
 </template>
 
 <script>
-import Cookie from 'js-cookie';
-
 export default {
   layout: 'login',
   created() {},
@@ -93,8 +91,21 @@ export default {
   },
   methods: {
     login() {
-      Cookie.set('token', '111');
-      this.$router.push('/manager');
+      this.$axios.post('/login', this.formData).then((res) => {
+        this.$Cookies.set('token', res.data.token);
+        this.$Cookies.set('userData', JSON.stringify(res.data));
+        this.$axios.post('/getCatelog', { userId: res.data.userId }).then((catelogres) => {
+          this.$Cookies.set('catelog', catelogres.data);
+          console.log(catelogres.data, 'catelogres.data');
+        }).catch((err) => {
+          console.log(err, 'err');
+        });
+        this.$router.push({
+          path: `${this.$route.query.ref || '/'}`,
+        });
+      }).catch((err) => {
+        console.log(err, 'err');
+      });
     },
   },
 };

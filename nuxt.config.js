@@ -25,10 +25,11 @@ export default {
   ],
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    {src: '@/plugins/element-ui', mode: 'client'},
+    '@/plugins/element-ui',
+    '@/plugins/echarts',
+    {src: '@/plugins/cookies', mode: 'client'},
     {src: '@/plugins/lodash', mode: 'client'},
     {src: '@/plugins/day', mode: 'client'},
-    {src: '@/plugins/echarts', mode: 'client'},
     {src: '@/plugins/axios', mode: 'client'},
     {src: '@/plugins/mock', mode: 'client'},
     {src: '@assets/icons/iconfont.js', mode: 'client'},
@@ -59,6 +60,7 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     transpile: [/^element-ui/],
+    ssr: 'spa',
     extend(config, ctx) {
       // 执行eslint js代码校验
       config.module.rules.push({

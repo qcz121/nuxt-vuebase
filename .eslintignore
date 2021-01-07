@@ -89,7 +89,7 @@ sw.*
 # Vim swap files
 *.swp
 
-plugins/*.js
+plugins
 
 store/*.js
 
